@@ -63,7 +63,11 @@ class Cuaca extends React.Component {
           <div>
             <Card key={index} className="cuaca-container">
               <h1>{dataforecast.name[0]._}</h1>
-
+              {dataforecast.parameter[6].timerange[0].value._ == "1" ? (
+                <h1>Cerah</h1>
+              ) : (
+                <h1>Berkabut</h1>
+              )}
               <table>
                 <tr>
                   <td>{dataforecast.parameter[0].$.description}</td>

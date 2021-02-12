@@ -6,6 +6,7 @@ import Cuaca from "./Cuaca.js";
 import BMKG from "./BMKG.js";
 import Gempadirasakan from "./Gempadirasakan";
 import "./Layout.css";
+import About from "./About.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +29,9 @@ export default function Layout() {
         <Router>
           <div>
             <Switch>
+              <Route path="/kontributor">
+                <About />
+              </Route>
               <Route path="/dirasakan">
                 <Gempadirasakan />
               </Route>
@@ -49,6 +53,9 @@ export default function Layout() {
                 </li>
                 <li>
                   <Link to="/dirasakan">Dirasakan</Link>
+                </li>
+                <li>
+                  <Link to="/kontributor">Kontributor</Link>
                 </li>
               </ul>
             </nav>

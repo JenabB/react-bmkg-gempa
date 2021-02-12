@@ -18,7 +18,7 @@ import Typography from "@material-ui/core/Typography";
 
 class Gempadirasakan extends React.Component {
   state = {
-    datadirasakan: {},
+    datadirasakan: [],
   };
 
   async componentDidMount() {
@@ -59,9 +59,16 @@ class Gempadirasakan extends React.Component {
     // Tampilkan data...
     return (
       <div className="containerBMKG">
-        <Card className="cardContainer">
-          <h1>Tar</h1>
-        </Card>
+        {datadirasakan?.map((dirasakan, index) => (
+          <div key={index}>
+            <Card className="dirasakan-container">
+              <h1>{dirasakan.Dirasakan}</h1>
+              <h1>{dirasakan.Kedalaman}</h1>
+              <h1>{dirasakan.Keterangan}</h1>
+              <h1>{dirasakan.Magnitude}</h1>
+            </Card>
+          </div>
+        ))}
       </div>
     );
   }
