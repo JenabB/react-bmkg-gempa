@@ -3,8 +3,17 @@
 }
 
 nav {
-  background-color: aquamarine;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 3px #999;
   display: inline-flex;
+}
+
+.float {
+  z-index: 10;
+  position: fixed;
+  left: 170px;
+  bottom: 15px;
 }
 
 ul {
@@ -12,8 +21,22 @@ ul {
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  padding: 0;
 }
 
 li {
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .app-container {
+    margin-top: 0px;
+  }
+  .float {
+    z-index: 10;
+    position: fixed;
+    left: 40px;
+    bottom: 15px;
+  }
 }

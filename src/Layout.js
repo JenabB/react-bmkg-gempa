@@ -43,7 +43,7 @@ export default function Layout() {
               </Route>
             </Switch>
 
-            <nav>
+            <nav className="float">
               <ul>
                 <li>
                   <Link to="/">Gempa</Link>
