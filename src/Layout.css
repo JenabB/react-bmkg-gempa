@@ -4,7 +4,7 @@
 
 nav {
   border-radius: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: teal;
   box-shadow: 2px 2px 3px #999;
   display: inline-flex;
 }
@@ -29,14 +29,29 @@ li {
   margin-right: 10px;
 }
 
+p.menu-title {
+  text-decoration: none;
+  color: white;
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+}
+
 @media only screen and (max-width: 600px) {
   .app-container {
     margin-top: 0px;
   }
+  nav {
+    border-radius: 0px;
+    background-color: teal;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    width: 100%;
+  }
+
   .float {
     z-index: 10;
     position: fixed;
-    left: 40px;
-    bottom: 15px;
+    left: 0px;
+    bottom: 0;
   }
 }

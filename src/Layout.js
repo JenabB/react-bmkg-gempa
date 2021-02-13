@@ -7,6 +7,10 @@ import BMKG from "./BMKG.js";
 import Gempadirasakan from "./Gempadirasakan";
 import "./Layout.css";
 import About from "./About.js";
+import gempa from "./assets/images/BMKG-over5.png";
+import cuaca from "./assets/images/BMKG-Cuaca.png";
+import dirasakan from "./assets/images/BMKG-20.png";
+import kontributor from "./assets/images/BMKG-About.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,6 +33,9 @@ export default function Layout() {
         <Router>
           <div>
             <Switch>
+              <Route path="/tentang">
+                <About />
+              </Route>
               <Route path="/kontributor">
                 <About />
               </Route>
@@ -46,16 +53,38 @@ export default function Layout() {
             <nav className="float">
               <ul>
                 <li>
-                  <Link to="/">Gempa</Link>
+                  <Link to="/">
+                    <img src={gempa} alt="gempa" width="40px" />
+                    <p class="menu-title">Gempa</p>
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/cuaca">Cuaca</Link>
+                  <Link to="/cuaca">
+                    {" "}
+                    <img src={cuaca} alt="gempa" width="40px" />
+                    <p class="menu-title">Cuaca</p>
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/dirasakan">Dirasakan</Link>
+                  <Link to="/dirasakan">
+                    {" "}
+                    <img src={dirasakan} alt="gempa" width="40px" />
+                    <p class="menu-title">Dirasakan</p>
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/kontributor">Kontributor</Link>
+                  <Link to="/kontributor">
+                    {" "}
+                    <img src={kontributor} alt="gempa" width="40px" />
+                    <p class="menu-title">Kontributor</p>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/tentang">
+                    {" "}
+                    <img src={dirasakan} alt="gempa" width="40px" />
+                    <p class="menu-title">Tentang</p>
+                  </Link>
                 </li>
               </ul>
             </nav>
