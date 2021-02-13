@@ -1,27 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b70b8306c549103f4f2d11e132c0a328",
+    "revision": "d1279952b2721e3b54942f3b727f482b",
     "url": "/react-bmkg-gempa/index.html"
   },
   {
-    "revision": "ce978b1b0c8ef459d938",
-    "url": "/react-bmkg-gempa/static/css/main.79bb2928.chunk.css"
+    "revision": "aba6bae9a48597a44780",
+    "url": "/react-bmkg-gempa/static/css/main.410f05e9.chunk.css"
   },
   {
-    "revision": "e67a49dabfd1e98f14c7",
-    "url": "/react-bmkg-gempa/static/js/2.c41be3cc.chunk.js"
+    "revision": "0b804284ef268401d454",
+    "url": "/react-bmkg-gempa/static/js/2.0fdc1032.chunk.js"
   },
   {
     "revision": "27ca4020711bd21574faae3da7dd14e9",
-    "url": "/react-bmkg-gempa/static/js/2.c41be3cc.chunk.js.LICENSE.txt"
+    "url": "/react-bmkg-gempa/static/js/2.0fdc1032.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ce978b1b0c8ef459d938",
-    "url": "/react-bmkg-gempa/static/js/main.31008ddb.chunk.js"
+    "revision": "aba6bae9a48597a44780",
+    "url": "/react-bmkg-gempa/static/js/main.905f1a6e.chunk.js"
   },
   {
     "revision": "bb0b5e24f1e5875691b5",
     "url": "/react-bmkg-gempa/static/js/runtime-main.9f24156a.js"
+  },
+  {
+    "revision": "3635e39cb66ed2c0327dcd77a8ef8ebf",
+    "url": "/react-bmkg-gempa/static/media/001-cloudy day.3635e39c.png"
+  },
+  {
+    "revision": "b3253a7605bb84967ba52e40018256e1",
+    "url": "/react-bmkg-gempa/static/media/002-sunny.b3253a76.png"
+  },
+  {
+    "revision": "173c8bfcc6fcf00ade61935da069cc4e",
+    "url": "/react-bmkg-gempa/static/media/009-rainy.173c8bfc.png"
   },
   {
     "revision": "9d4ea06ea4c1e61f2896e2955e1aeecf",

@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/react-bmkg-gempa/static/css/main.79bb2928.chunk.css",
-    "main.js": "/react-bmkg-gempa/static/js/main.31008ddb.chunk.js",
-    "main.js.map": "/react-bmkg-gempa/static/js/main.31008ddb.chunk.js.map",
+    "main.css": "/react-bmkg-gempa/static/css/main.410f05e9.chunk.css",
+    "main.js": "/react-bmkg-gempa/static/js/main.905f1a6e.chunk.js",
+    "main.js.map": "/react-bmkg-gempa/static/js/main.905f1a6e.chunk.js.map",
     "runtime-main.js": "/react-bmkg-gempa/static/js/runtime-main.9f24156a.js",
     "runtime-main.js.map": "/react-bmkg-gempa/static/js/runtime-main.9f24156a.js.map",
-    "static/js/2.c41be3cc.chunk.js": "/react-bmkg-gempa/static/js/2.c41be3cc.chunk.js",
-    "static/js/2.c41be3cc.chunk.js.map": "/react-bmkg-gempa/static/js/2.c41be3cc.chunk.js.map",
+    "static/js/2.0fdc1032.chunk.js": "/react-bmkg-gempa/static/js/2.0fdc1032.chunk.js",
+    "static/js/2.0fdc1032.chunk.js.map": "/react-bmkg-gempa/static/js/2.0fdc1032.chunk.js.map",
     "index.html": "/react-bmkg-gempa/index.html",
-    "precache-manifest.ce6267d5b9848734f499bfd54080375b.js": "/react-bmkg-gempa/precache-manifest.ce6267d5b9848734f499bfd54080375b.js",
+    "precache-manifest.63e4dbd8f7b70e819597c7b79ec83835.js": "/react-bmkg-gempa/precache-manifest.63e4dbd8f7b70e819597c7b79ec83835.js",
     "service-worker.js": "/react-bmkg-gempa/service-worker.js",
-    "static/css/main.79bb2928.chunk.css.map": "/react-bmkg-gempa/static/css/main.79bb2928.chunk.css.map",
-    "static/js/2.c41be3cc.chunk.js.LICENSE.txt": "/react-bmkg-gempa/static/js/2.c41be3cc.chunk.js.LICENSE.txt",
+    "static/css/main.410f05e9.chunk.css.map": "/react-bmkg-gempa/static/css/main.410f05e9.chunk.css.map",
+    "static/js/2.0fdc1032.chunk.js.LICENSE.txt": "/react-bmkg-gempa/static/js/2.0fdc1032.chunk.js.LICENSE.txt",
+    "static/media/001-cloudy day.png": "/react-bmkg-gempa/static/media/001-cloudy day.3635e39c.png",
+    "static/media/002-sunny.png": "/react-bmkg-gempa/static/media/002-sunny.b3253a76.png",
+    "static/media/009-rainy.png": "/react-bmkg-gempa/static/media/009-rainy.173c8bfc.png",
     "static/media/BMKG-20.png": "/react-bmkg-gempa/static/media/BMKG-20.9d4ea06e.png",
     "static/media/BMKG-About.png": "/react-bmkg-gempa/static/media/BMKG-About.4e8b81f3.png",
     "static/media/BMKG-Cuaca.png": "/react-bmkg-gempa/static/media/BMKG-Cuaca.783670b7.png",
@@ -19,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9f24156a.js",
-    "static/js/2.c41be3cc.chunk.js",
-    "static/css/main.79bb2928.chunk.css",
-    "static/js/main.31008ddb.chunk.js"
+    "static/js/2.0fdc1032.chunk.js",
+    "static/css/main.410f05e9.chunk.css",
+    "static/js/main.905f1a6e.chunk.js"
   ]
 }
