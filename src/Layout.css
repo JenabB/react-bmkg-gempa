@@ -6,7 +6,6 @@ nav {
   border-radius: 20px;
   background-color: teal;
   box-shadow: 2px 2px 3px #999;
-  display: inline-flex;
 }
 
 .float {
@@ -27,6 +26,10 @@ ul {
 li {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
 }
 
 p.menu-title {

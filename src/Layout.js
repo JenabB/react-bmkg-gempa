@@ -6,7 +6,8 @@ import Cuaca from "./Cuaca.js";
 import BMKG from "./BMKG.js";
 import Gempadirasakan from "./Gempadirasakan";
 import "./Layout.css";
-import About from "./About.js";
+import Contributor from "./Contributor.js";
+import Abouts from "./Abouts.js";
 import gempa from "./assets/images/BMKG-over5.png";
 import cuaca from "./assets/images/BMKG-Cuaca.png";
 import dirasakan from "./assets/images/BMKG-20.png";
@@ -34,10 +35,10 @@ export default function Layout() {
           <div>
             <Switch>
               <Route path="/tentang">
-                <About />
+                <Abouts />
               </Route>
               <Route path="/kontributor">
-                <About />
+                <Contributor />
               </Route>
               <Route path="/dirasakan">
                 <Gempadirasakan />

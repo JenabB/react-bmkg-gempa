@@ -1,9 +1,13 @@
 import React from "react";
 import { Card } from "@material-ui/core";
-import "./Cuaca.css";
+import "./Contributor.css";
 
-const About = () => {
+const Contributor = () => {
   const credits = [
+    {
+      nama: "Yogi Surya Pranata",
+      sebagai: "Developer & Idea",
+    },
     {
       nama: "kotakode.com",
       sebagai: "Penyedia forum dan bantuan",
@@ -12,14 +16,16 @@ const About = () => {
       nama: "BMKG",
       sebagai: "Open API",
     },
+
     {
       nama: "fjstudio",
       sebagai: "Weather Icons from flaticon.com",
     },
+    { nama: "Hendra Agil", sebagai: "problem solver" },
   ];
 
   return (
-    <div className="about-container">
+    <div className="contributor-container">
       <h1>Kontributor</h1>
       {credits.map((credit, index) => (
         <div key={index}>
@@ -35,4 +41,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contributor;

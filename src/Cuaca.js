@@ -7,6 +7,11 @@ import axios from "axios";
 import xml2js from "xml2js";
 import "./Cuaca.css";
 import Card from "@material-ui/core/Card";
+
+import cloudy from "./assets/images/001-cloudy day.png";
+import rain from "./assets/images/009-rainy.png";
+import sunny from "./assets/images/002-sunny.png";
+
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -64,9 +69,9 @@ class Cuaca extends React.Component {
             <Card key={index} className="cuaca-container">
               <h1>{dataforecast.name[0]._}</h1>
               {dataforecast.parameter[6].timerange[0].value._ == "1" ? (
-                <h1>Cerah</h1>
+                <img src={sunny} alt="weather" width="80px" />
               ) : (
-                <h1>Berkabut</h1>
+                <img src={cloudy} alt="weather" width="80px" />
               )}
               <table>
                 <tr>
