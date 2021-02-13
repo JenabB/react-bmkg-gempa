@@ -53,35 +53,35 @@ export default function Layout() {
               <ul>
                 <li>
                   <Link to="/">
-                    <img src={gempa} alt="gempa" width="40px" />
+                    <img src={gempa} alt="gempa" width="30px" />
                     <p class="menu-title">Gempa</p>
                   </Link>
                 </li>
                 <li>
                   <Link to="/cuaca">
                     {" "}
-                    <img src={cuaca} alt="gempa" width="40px" />
+                    <img src={cuaca} alt="gempa" width="30px" />
                     <p class="menu-title">Cuaca</p>
                   </Link>
                 </li>
                 <li>
                   <Link to="/dirasakan">
                     {" "}
-                    <img src={dirasakan} alt="gempa" width="40px" />
+                    <img src={dirasakan} alt="gempa" width="30px" />
                     <p class="menu-title">Dirasakan</p>
                   </Link>
                 </li>
                 <li>
                   <Link to="/kontributor">
                     {" "}
-                    <img src={kontributor} alt="gempa" width="40px" />
+                    <img src={kontributor} alt="gempa" width="30px" />
                     <p class="menu-title">Kontributor</p>
                   </Link>
                 </li>
                 <li>
                   <Link to="/tentang">
                     {" "}
-                    <img src={dirasakan} alt="gempa" width="40px" />
+                    <img src={dirasakan} alt="gempa" width="30px" />
                     <p class="menu-title">Tentang</p>
                   </Link>
                 </li>
