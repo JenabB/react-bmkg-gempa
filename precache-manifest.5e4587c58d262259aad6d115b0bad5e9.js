@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d1279952b2721e3b54942f3b727f482b",
+    "revision": "a34a5e6f6ce35299f47fbafc8a997924",
     "url": "/react-bmkg-gempa/index.html"
   },
   {
