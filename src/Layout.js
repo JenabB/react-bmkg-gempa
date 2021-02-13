@@ -20,8 +20,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Layout() {
-  const classes = useStyles();
-
   return (
     <div className="app-container">
       <Grid
