@@ -73,7 +73,7 @@ class Cuaca extends React.Component {
               ) : (
                 <img src={cloudy} alt="weather" width="80px" />
               )}
-              <table>
+              <table className="table-condition">
                 <tr>
                   <td>{dataforecast.parameter[0].$.description}</td>
                   <td>{dataforecast.parameter[0].timerange[0].value._} %</td>
