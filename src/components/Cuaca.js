@@ -5,8 +5,13 @@ import React from "react";
 import axios from "axios";
 // Library yang digunakan untuk parsing xml menjadi object
 import xml2js from "xml2js";
-import "./BMKG.css";
+import "./Cuaca.css";
 import Card from "@material-ui/core/Card";
+
+import cloudy from "../assets/images/001-cloudy day.png";
+import rain from "../assets/images/009-rainy.png";
+import sunny from "../assets/images/002-sunny.png";
+
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -16,9 +21,9 @@ import Typography from "@material-ui/core/Typography";
 // Data dari contoh kodingan ini hasilnya masih berupa string xml dan harus kita
 // ubah terlebih dahulu.
 
-class BMKG extends React.Component {
+class Cuaca extends React.Component {
   state = {
-    data: {},
+    datacuaca: [],
   };
 
   async componentDidMount() {
@@ -31,7 +36,7 @@ class BMKG extends React.Component {
     });
     try {
       const response = await axios.get(
-        "https://data.bmkg.go.id/autogempa.xml",
+        "https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-Bengkulu.xml",
         {
           "Content-Type": "application/xml;",
         }
@@ -44,63 +49,46 @@ class BMKG extends React.Component {
       const parsedXml = await xmlParser.parseStringPromise(response.data);
       // destructuring: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
       const {
-        Infogempa: { gempa },
+        data: { forecast },
       } = parsedXml;
       // setelah parsing berhasil, hasilnya akan kita simpan di state
-      this.setState({ data: gempa });
+      this.setState({ datacuaca: forecast });
     } catch (error) {
       console.error("error", error);
     }
   }
 
   render() {
-    const { data } = this.state;
-    console.log("data", data);
+    const { datacuaca } = this.state;
+    console.log("cuaca", datacuaca);
     // Tampilkan data...
     return (
-      <div className="containerBMKG">
-        <Card className="cardContainer">
-          <CardActionArea>
-            <img
-              className="gambar-gempa"
-              src="https://data.bmkg.go.id/eqmap.gif"
-              alt="Girl in a jacket"
-            />
-            <CardContent>
-              <Typography
-                className="tanggalGempa"
-                variant="body2"
-                component="p"
-              >
-                {data.Tanggal}
-              </Typography>
-              <Typography
-                className="titleCard"
-                gutterBottom
-                variant="h5"
-                component="h2"
-              >
-                {data.Potensi}
-              </Typography>
-
-              <Typography variant="body2" color="textSecondary" component="p">
-                {data.Jam}
-              </Typography>
-              <div className="wilayahContainer">
-                <p className="wilayah">{data.Wilayah1}</p>
-                <p className="wilayah">{data.Wilayah2}</p>
-                <p className="wilayah">{data.Wilayah3}</p>
-              </div>
-            </CardContent>
-          </CardActionArea>
-          <div class="flex-container">
-            <div>{data.Magnitude}</div>
-            <div>{data.Kedalaman}</div>
-          </div>
-        </Card>
+      <div className="forecast-container">
+        {datacuaca?.area?.map((dataforecast, index) => (
+          <Card key={index} className="cuaca-container">
+            <h1>{dataforecast.name[0]._}</h1>
+            {dataforecast.parameter[6].timerange[0].value._ == "1" ? (
+              <img src={sunny} alt="weather" width="80px" />
+            ) : (
+              <img src={cloudy} alt="weather" width="80px" />
+            )}
+            <table className="table-condition">
+              <tr>
+                <td>{dataforecast.parameter[0].$.description}</td>
+                <td>{dataforecast.parameter[0].timerange[0].value._} %</td>
+              </tr>
+              <tr>
+                <td>{dataforecast.parameter[5].$.description}</td>
+                <td>
+                  {dataforecast.parameter[5].timerange[0].value[0]._} &deg;C
+                </td>
+              </tr>
+            </table>
+          </Card>
+        ))}
       </div>
     );
   }
 }
 
-export default BMKG;
+export default Cuaca;

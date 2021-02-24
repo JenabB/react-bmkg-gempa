@@ -5,7 +5,7 @@ import React from "react";
 import axios from "axios";
 // Library yang digunakan untuk parsing xml menjadi object
 import xml2js from "xml2js";
-import "./BMKG.css";
+import "./Gempadirasakan.css";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -58,16 +58,16 @@ class Gempadirasakan extends React.Component {
     console.log("Gempa Dirasakan", datadirasakan);
     // Tampilkan data...
     return (
-      <div className="containerBMKG">
+      <div className="dirasakan-container">
         {datadirasakan?.map((dirasakan, index) => (
-          <div key={index}>
-            <Card className="dirasakan-container">
-              <h1>{dirasakan.Dirasakan}</h1>
-              <h1>{dirasakan.Kedalaman}</h1>
-              <h1>{dirasakan.Keterangan}</h1>
-              <h1>{dirasakan.Magnitude}</h1>
-            </Card>
-          </div>
+          <Card key={index} className="dirasakan-card">
+            <h1>{dirasakan.Dirasakan}</h1>
+            <h2>{dirasakan.Kedalaman}</h2>
+            <h4>{dirasakan.Tanggal}</h4>
+            <h3>{dirasakan.Posisi}</h3>
+            <h3>{dirasakan.Keterangan}</h3>
+            <h4>{dirasakan.Magnitude} Sr</h4>
+          </Card>
         ))}
       </div>
     );

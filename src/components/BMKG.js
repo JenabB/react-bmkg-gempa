@@ -5,13 +5,8 @@ import React from "react";
 import axios from "axios";
 // Library yang digunakan untuk parsing xml menjadi object
 import xml2js from "xml2js";
-import "./Cuaca.css";
+import "./BMKG.css";
 import Card from "@material-ui/core/Card";
-
-import cloudy from "./assets/images/001-cloudy day.png";
-import rain from "./assets/images/009-rainy.png";
-import sunny from "./assets/images/002-sunny.png";
-
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -21,9 +16,9 @@ import Typography from "@material-ui/core/Typography";
 // Data dari contoh kodingan ini hasilnya masih berupa string xml dan harus kita
 // ubah terlebih dahulu.
 
-class Cuaca extends React.Component {
+class BMKG extends React.Component {
   state = {
-    datacuaca: [],
+    data: {},
   };
 
   async componentDidMount() {
@@ -36,7 +31,7 @@ class Cuaca extends React.Component {
     });
     try {
       const response = await axios.get(
-        "https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-Bengkulu.xml",
+        "https://data.bmkg.go.id/autogempa.xml",
         {
           "Content-Type": "application/xml;",
         }
@@ -49,48 +44,62 @@ class Cuaca extends React.Component {
       const parsedXml = await xmlParser.parseStringPromise(response.data);
       // destructuring: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
       const {
-        data: { forecast },
+        Infogempa: { gempa },
       } = parsedXml;
       // setelah parsing berhasil, hasilnya akan kita simpan di state
-      this.setState({ datacuaca: forecast });
+      this.setState({ data: gempa });
     } catch (error) {
       console.error("error", error);
     }
   }
 
   render() {
-    const { datacuaca } = this.state;
-    console.log("cuaca", datacuaca);
+    const { data } = this.state;
+    console.log("data", data);
     // Tampilkan data...
     return (
-      <div className="forecast-container">
-        {datacuaca?.area?.map((dataforecast, index) => (
-          <div>
-            <Card key={index} className="cuaca-container">
-              <h1>{dataforecast.name[0]._}</h1>
-              {dataforecast.parameter[6].timerange[0].value._ == "1" ? (
-                <img src={sunny} alt="weather" width="80px" />
-              ) : (
-                <img src={cloudy} alt="weather" width="80px" />
-              )}
-              <table className="table-condition">
-                <tr>
-                  <td>{dataforecast.parameter[0].$.description}</td>
-                  <td>{dataforecast.parameter[0].timerange[0].value._} %</td>
-                </tr>
-                <tr>
-                  <td>{dataforecast.parameter[5].$.description}</td>
-                  <td>
-                    {dataforecast.parameter[5].timerange[0].value[0]._} &deg;C
-                  </td>
-                </tr>
-              </table>
-            </Card>
+      <div className="containerBMKG">
+        <Card>
+          <CardActionArea>
+            <img
+              src="https://data.bmkg.go.id/eqmap.gif"
+              alt="Girl in a jacket"
+            />
+            <CardContent className="card-content">
+              <Typography
+                className="tanggalGempa"
+                variant="body2"
+                component="p"
+              >
+                {data.Tanggal}
+              </Typography>
+              <Typography
+                className="titleCard"
+                gutterBottom
+                variant="h5"
+                component="h2"
+              >
+                {data.Potensi}
+              </Typography>
+
+              <Typography variant="body2" color="textSecondary" component="p">
+                {data.Jam}
+              </Typography>
+              <div className="wilayahContainer">
+                <p className="wilayah">{data.Wilayah1}</p>
+                <p className="wilayah">{data.Wilayah2}</p>
+                <p className="wilayah">{data.Wilayah3}</p>
+              </div>
+            </CardContent>
+          </CardActionArea>
+          <div class="flex-container">
+            <div>{data.Magnitude}</div>
+            <div>{data.Kedalaman}</div>
           </div>
-        ))}
+        </Card>
       </div>
     );
   }
 }
 
-export default Cuaca;
+export default BMKG;

@@ -1,0 +1,17 @@
+.dirasakan-container {
+  min-height: 100vh;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.dirasakan-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+h1,
+h3 {
+  font-size: 10pt;
+}
