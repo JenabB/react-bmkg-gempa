@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a34a5e6f6ce35299f47fbafc8a997924",
+    "revision": "5de54aa1d0d4f6ac36204e7bd48cbad0",
     "url": "/react-bmkg-gempa/index.html"
   },
   {
-    "revision": "aba6bae9a48597a44780",
-    "url": "/react-bmkg-gempa/static/css/main.410f05e9.chunk.css"
+    "revision": "41f99b4d97068782662a",
+    "url": "/react-bmkg-gempa/static/css/main.df71387d.chunk.css"
   },
   {
-    "revision": "0b804284ef268401d454",
-    "url": "/react-bmkg-gempa/static/js/2.0fdc1032.chunk.js"
+    "revision": "8bd59d17c132c8c24a9b",
+    "url": "/react-bmkg-gempa/static/js/2.e878be36.chunk.js"
   },
   {
     "revision": "27ca4020711bd21574faae3da7dd14e9",
-    "url": "/react-bmkg-gempa/static/js/2.0fdc1032.chunk.js.LICENSE.txt"
+    "url": "/react-bmkg-gempa/static/js/2.e878be36.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aba6bae9a48597a44780",
-    "url": "/react-bmkg-gempa/static/js/main.905f1a6e.chunk.js"
+    "revision": "41f99b4d97068782662a",
+    "url": "/react-bmkg-gempa/static/js/main.3f250fee.chunk.js"
   },
   {
     "revision": "bb0b5e24f1e5875691b5",
