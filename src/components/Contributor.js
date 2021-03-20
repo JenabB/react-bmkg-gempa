@@ -25,7 +25,7 @@ const Contributor = () => {
 
   return (
     <div className="contributor-container">
-      <h1>Kontributor</h1>
+      <h1 className="contributor-title">Kontributor</h1>
       {credits.map((credit, index) => (
         <div key={index}>
           <table>

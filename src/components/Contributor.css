@@ -4,3 +4,9 @@
   padding: 10px 20px;
   background-color: white;
 }
+
+.contributor-title {
+  font-size: 25px;
+  color: teal;
+  margin: 20px;
+}
