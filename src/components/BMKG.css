@@ -1,4 +1,9 @@
-.containerBMKG {
+* {
+  margin: 0;
+  text-align: center;
+}
+
+.bmkg-container {
   border-radius: 20px;
   background-color: white;
   padding-bottom: 65.4px;
@@ -8,58 +13,32 @@
   width: 100%;
 }
 
-.card-content {
-  text-align: center !important;
+.wilayah-gempa {
+  font-size: 15px;
 }
 
-.tanggalGempa {
-  color: teal !important;
-  font-weight: bold !important;
-  font-size: 12pt !important;
-}
-
-.titleCard {
-  margin-top: 2px !important;
-  margin-bottom: 10px !important;
-  font-weight: bold !important;
-}
-
-.wilayahContainer {
-  margin: 25px 0px;
-}
-
-.wilayah {
-  margin: 15px;
-  font-size: 10pt;
-}
-.flex-container {
-  display: flex;
+.magnitude-gempa {
+  margin: 20px 0px;
+  padding: 20px 15px;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 40px;
   background-color: teal;
-  justify-content: center;
+  display: inline-block;
+  border-radius: 50px;
 }
 
-.flex-container > div {
-  color: white;
-  margin-left: 5px;
-  border-radius: 10px;
-  padding: 5px 10px;
-  font-size: 30px;
+.tanggal-gempa {
+  color: teal;
   font-weight: bold;
+  font-size: 12pt;
 }
 
-@media only screen and (max-width: 600px) {
-  .containerBMKG {
-    width: 100%;
-  }
-
-  .cardContainer {
-    border-radius: 0px !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-  }
-
-  .gambar-gempa {
-    border-radius: 0px;
-    width: 100%;
-    height: 100%;
-  }
+.potensi-gempa {
+  margin-top: 10px;
+  color: grey;
+  font-size: 15px;
+}
+.waktu-gempa {
+  margin-top: 10px;
 }

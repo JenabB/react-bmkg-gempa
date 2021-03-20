@@ -58,7 +58,7 @@ class BMKG extends React.Component {
     console.log("data gempa", data);
     // Tampilkan data...
     return (
-      <div className="containerBMKG">
+      <div className="bmkg-container">
         <Card>
           <div>
             <img
@@ -66,34 +66,14 @@ class BMKG extends React.Component {
               src={`https://data.bmkg.go.id/DataMKG/TEWS/${data.Shakemap}`}
               alt="Shakemap"
             />
-            <CardContent className="card-content">
-              <Typography
-                className="tanggalGempa"
-                variant="body2"
-                component="p"
-              >
-                {data.Tanggal}
-              </Typography>
-              <Typography
-                className="titleCard"
-                gutterBottom
-                variant="h5"
-                component="h2"
-              >
-                {data.Wilayah}
-              </Typography>
-
-              <Typography variant="body2" color="textSecondary" component="p">
-                {data.Jam}
-              </Typography>
-              <div className="wilayahContainer">
-                <p className="wilayah">{data.Potensi}</p>
-              </div>
+            <CardContent>
+              <h1 className="tanggal-gempa">{data.Tanggal}</h1>
+              <h2 className="wilayah-gempa">{data.Wilayah}</h2>
+              <h1 className="magnitude-gempa">{data.Magnitude}</h1>
+              <h1 className="kedalaman-gempa">{data.Kedalaman}</h1>
+              <p className="waktu-gempa">{data.Jam}</p>
+              <p className="potensi-gempa">{data.Potensi}</p>
             </CardContent>
-          </div>
-          <div class="flex-container">
-            <div>{data.Magnitude}</div>
-            <div>{data.Kedalaman}</div>
           </div>
         </Card>
       </div>
