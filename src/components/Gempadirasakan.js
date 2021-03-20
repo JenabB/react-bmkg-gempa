@@ -41,12 +41,12 @@ class Gempadirasakan extends React.Component {
       <div className="dirasakan-container">
         {datadirasakan?.map((dirasakan, index) => (
           <Card key={index} className="dirasakan-card">
+            <h4 className="tanggal-gempa-dirasakan">{dirasakan.Tanggal}</h4>
             <h1>{dirasakan.Dirasakan}</h1>
-            <h2>{dirasakan.Kedalaman}</h2>
-            <h4>{dirasakan.Tanggal}</h4>
-            <h3>{dirasakan.Posisi}</h3>
             <h3>{dirasakan.Keterangan}</h3>
-            <h4>{dirasakan.Magnitude} Sr</h4>
+            <h4 className="magnitude-gempa-dirasakan">{dirasakan.Magnitude}</h4>
+            <h2>{dirasakan.Kedalaman}</h2>
+            <h3>{dirasakan.Posisi}</h3>
           </Card>
         ))}
       </div>
