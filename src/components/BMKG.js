@@ -7,9 +7,7 @@ import axios from "axios";
 import xml2js from "xml2js";
 import "./BMKG.css";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
 
 // NOTE : Pada artikel diatas, data dari contoh pertama sepertinya sudah di-parse
 // oleh server menjadi object jadi kita tinggal menampilkan datanya saja.

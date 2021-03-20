@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "@material-ui/core";
 import "./Contributor.css";
 
 const Contributor = () => {
@@ -14,14 +13,14 @@ const Contributor = () => {
     },
     {
       nama: "BMKG",
-      sebagai: "Open API",
+      sebagai: "penyedia Open API",
     },
 
     {
       nama: "fjstudio",
       sebagai: "Weather Icons from flaticon.com",
     },
-    { nama: "Hendra Agil", sebagai: "problem solver" },
+    { nama: "Hendra Agil", sebagai: "problem solver dari kotakode.com" },
   ];
 
   return (
