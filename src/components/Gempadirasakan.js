@@ -7,7 +7,6 @@ import axios from "axios";
 import xml2js from "xml2js";
 import "./Gempadirasakan.css";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 

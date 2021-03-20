@@ -31,7 +31,7 @@ class BMKG extends React.Component {
     });
     try {
       const response = await axios.get(
-        "https://data.bmkg.go.id/autogempa.xml",
+        "https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml",
         {
           "Content-Type": "application/xml;",
         }
@@ -55,15 +55,16 @@ class BMKG extends React.Component {
 
   render() {
     const { data } = this.state;
-    console.log("data", data);
+    console.log("data gempa", data);
     // Tampilkan data...
     return (
       <div className="containerBMKG">
         <Card>
-          <CardActionArea>
+          <div>
             <img
-              src="https://data.bmkg.go.id/eqmap.gif"
-              alt="Girl in a jacket"
+              className="shakemap"
+              src={`https://data.bmkg.go.id/DataMKG/TEWS/${data.Shakemap}`}
+              alt="Shakemap"
             />
             <CardContent className="card-content">
               <Typography
@@ -79,19 +80,17 @@ class BMKG extends React.Component {
                 variant="h5"
                 component="h2"
               >
-                {data.Potensi}
+                {data.Wilayah}
               </Typography>
 
               <Typography variant="body2" color="textSecondary" component="p">
                 {data.Jam}
               </Typography>
               <div className="wilayahContainer">
-                <p className="wilayah">{data.Wilayah1}</p>
-                <p className="wilayah">{data.Wilayah2}</p>
-                <p className="wilayah">{data.Wilayah3}</p>
+                <p className="wilayah">{data.Potensi}</p>
               </div>
             </CardContent>
-          </CardActionArea>
+          </div>
           <div class="flex-container">
             <div>{data.Magnitude}</div>
             <div>{data.Kedalaman}</div>

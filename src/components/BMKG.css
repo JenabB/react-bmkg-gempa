@@ -1,12 +1,11 @@
 .containerBMKG {
-  min-height: 100vh;
   border-radius: 20px;
-  padding: 10px 20px;
   background-color: white;
+  padding-bottom: 65.4px;
 }
 
-.MuiCardContent-root {
-  padding: 0px !important;
+.shakemap {
+  width: 100%;
 }
 
 .card-content {
