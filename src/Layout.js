@@ -11,7 +11,7 @@ import gempa from "./assets/images/BMKG-over5.png";
 import cuaca from "./assets/images/BMKG-Cuaca.png";
 import dirasakan from "./assets/images/BMKG-20.png";
 import kontributor from "./assets/images/BMKG-About.png";
-
+import info from "./assets/images/info.png";
 export default function Layout() {
   return (
     <div className="app-container">
@@ -62,7 +62,7 @@ export default function Layout() {
             </div>
             <div>
               <Link to="/tentang">
-                <img src={dirasakan} alt="gempa" width="30px" />
+                <img src={info} alt="gempa" width="30px" />
                 <p class="menu-title">Tentang</p>
               </Link>
             </div>
