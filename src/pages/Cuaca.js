@@ -1,12 +1,11 @@
-import React from "react";
-import axios from "axios";
-import xml2js from "xml2js";
-import "./Cuaca.css";
-import Card from "@material-ui/core/Card";
+import React from 'react';
+import axios from 'axios';
+import xml2js from 'xml2js';
+import './Cuaca.css';
 
-import cloudy from "../assets/images/001-cloudy day.png";
-
-import sunny from "../assets/images/002-sunny.png";
+import Card from '@material-ui/core/Card';
+import cloudy from '../assets/images/001-cloudy day.png';
+import sunny from '../assets/images/002-sunny.png';
 
 class Cuaca extends React.Component {
   state = {
@@ -19,9 +18,9 @@ class Cuaca extends React.Component {
     });
     try {
       const response = await axios.get(
-        "https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-Bengkulu.xml",
+        'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-Bengkulu.xml',
         {
-          "Content-Type": "application/xml;",
+          'Content-Type': 'application/xml;',
         }
       );
       const parsedXml = await xmlParser.parseStringPromise(response.data);
@@ -30,19 +29,18 @@ class Cuaca extends React.Component {
       } = parsedXml;
       this.setState({ datacuaca: forecast });
     } catch (error) {
-      console.error("error", error);
+      console.error('error', error);
     }
   }
 
   render() {
     const { datacuaca } = this.state;
-    console.log("cuaca", datacuaca);
     return (
-      <div className="forecast-container">
+      <div className="">
         {datacuaca?.area?.map((dataforecast, index) => (
-          <Card key={index} className="cuaca-container">
+          <Card key={index} align="center" className="cuaca-container">
             <h1>{dataforecast.name[0]._}</h1>
-            {dataforecast.parameter[6].timerange[0].value._ === "1" ? (
+            {dataforecast.parameter[6].timerange[0].value._ === '1' ? (
               <img src={sunny} alt="weather" width="80px" />
             ) : (
               <img src={cloudy} alt="weather" width="80px" />

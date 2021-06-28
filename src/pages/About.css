@@ -1,6 +1,4 @@
-.about-container {
-  min-height: 100vh;
-  border-radius: 20px;
-  padding: 10px 20px;
+.tentang {
   background-color: white;
+  padding: 20px;
 }

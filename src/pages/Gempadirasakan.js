@@ -32,12 +32,10 @@ class Gempadirasakan extends React.Component {
 
   render() {
     const { datadirasakan } = this.state;
-    console.log('Gempa Dirasakan', datadirasakan);
-
     return (
-      <div className="dirasakan-container">
+      <div className="">
         {datadirasakan?.map((dirasakan, index) => (
-          <Card key={index} className="dirasakan-card">
+          <Card key={index} align="center" className="dirasakan-card">
             <h4 className="tanggal-gempa-dirasakan">{dirasakan.Tanggal}</h4>
             <h1>{dirasakan.Dirasakan}</h1>
             <h3>{dirasakan.Keterangan}</h3>

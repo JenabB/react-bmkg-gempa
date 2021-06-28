@@ -24,8 +24,8 @@ const Abouts = () => {
   ];
 
   return (
-    <div>
-      <div className="">
+    <div className="app-container">
+      <div className="tentang">
         <h1 className="contributor-title">Tentang</h1>
         <div className="contributor-content">
           <p style={{ textAlign: 'justify' }}>
@@ -38,7 +38,7 @@ const Abouts = () => {
           </p>
         </div>
       </div>
-      <div className="">
+      <div className="tentang">
         <h1 className="contributor-title">Kontributor</h1>
         {credits.map((credit, index) => (
           <div key={index}>
