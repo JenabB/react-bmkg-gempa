@@ -1,8 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 import xml2js from 'xml2js';
-import { Grid, Card, CardContent } from '@material-ui/core';
+import {
+  Grid,
+  Card,
+  CardContent,
+  Typography,
+  withStyles,
+} from '@material-ui/core';
 
+const TextTypography = withStyles({
+  root: { color: 'teal', fontWeight: 'bold' },
+})(Typography);
 class BMKG extends React.Component {
   state = {
     data: {},
@@ -38,20 +47,23 @@ class BMKG extends React.Component {
         direction="column"
         alignItems="center"
         justify="center"
-        style={{ minHeight: '100vh' }}
+        style={{ minHeight: '100vh', paddingBottom: '50px' }}
       >
         <Grid>
           <Card>
             <div>
               <img
-                className="shakemap"
+                style={{ width: '100%' }}
                 src={`https://data.bmkg.go.id/DataMKG/TEWS/${data.Shakemap}`}
                 alt="Shakemap"
               />
-              <CardContent>
-                <h1 className="tanggal-gempa">{data.Tanggal}</h1>
-                <h2 className="wilayah-gempa">{data.Wilayah}</h2>
-                <h1 className="magnitude-gempa">{data.Magnitude}</h1>
+              <CardContent style={{ textAlign: 'center' }}>
+                <TextTypography component="h1" align="center">
+                  {data.Wilayah}
+                </TextTypography>
+
+                <h1 style={{ textAlign: 'center' }}>{data.Tanggal}</h1>
+                <h1 className="magnitude-gempa-dirasakan">{data.Magnitude}</h1>
                 <h1 className="kedalaman-gempa">{data.Kedalaman}</h1>
                 <p className="waktu-gempa">{data.Jam}</p>
                 <p className="potensi-gempa">{data.Potensi}</p>

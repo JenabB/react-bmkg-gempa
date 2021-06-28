@@ -5,6 +5,16 @@ html {
 .App {
   height: 100vh;
 }
+.magnitude-gempa-dirasakan {
+  padding: 20px 15px;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 30px;
+  background-color: teal;
+  width: 50px;
+  margin: 20px auto;
+  border-radius: 50px;
+}
 
 @media only screen and (max-width: 800px) {
   .App {

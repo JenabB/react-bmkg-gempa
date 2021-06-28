@@ -1,8 +1,8 @@
-import React from "react";
-import axios from "axios";
-import xml2js from "xml2js";
-import "./Gempadirasakan.css";
-import Card from "@material-ui/core/Card";
+import React from 'react';
+import axios from 'axios';
+import xml2js from 'xml2js';
+import './Gempadirasakan.css';
+import Card from '@material-ui/core/Card';
 
 class Gempadirasakan extends React.Component {
   state = {
@@ -15,27 +15,24 @@ class Gempadirasakan extends React.Component {
     });
     try {
       const response = await axios.get(
-        "https://data.bmkg.go.id/gempadirasakan.xml",
+        'https://data.bmkg.go.id/gempadirasakan.xml',
         {
-          "Content-Type": "application/xml;",
+          'Content-Type': 'application/xml;',
         }
       );
-
       const parsedXml = await xmlParser.parseStringPromise(response.data);
-
       const {
         Infogempa: { Gempa },
       } = parsedXml;
-
       this.setState({ datadirasakan: Gempa });
     } catch (error) {
-      console.error("error", error);
+      console.error('error', error);
     }
   }
 
   render() {
     const { datadirasakan } = this.state;
-    console.log("Gempa Dirasakan", datadirasakan);
+    console.log('Gempa Dirasakan', datadirasakan);
 
     return (
       <div className="dirasakan-container">

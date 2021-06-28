@@ -19,14 +19,3 @@ h3 {
 .tanggal-gempa-dirasakan {
   color: teal;
 }
-
-.magnitude-gempa-dirasakan {
-  margin: 20px 0px;
-  padding: 20px 15px;
-  color: aliceblue;
-  font-weight: 800;
-  font-size: 30px;
-  background-color: teal;
-  display: inline-block;
-  border-radius: 50px;
-}
