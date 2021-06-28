@@ -3,12 +3,10 @@ html {
 }
 
 .App {
-  max-width: 480px;
-  margin: 10px auto;
   height: 100vh;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .App {
     margin: 0;
   }
