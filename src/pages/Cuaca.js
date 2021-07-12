@@ -36,7 +36,7 @@ class Cuaca extends React.Component {
   render() {
     const { datacuaca } = this.state;
     return (
-      <div className="">
+      <div className="cuaca-container">
         {datacuaca?.area?.map((dataforecast, index) => (
           <Card key={index} align="center" className="cuaca-container">
             <h1>{dataforecast.name[0]._}</h1>

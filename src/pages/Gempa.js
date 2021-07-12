@@ -8,6 +8,7 @@ import {
   Typography,
   withStyles,
 } from '@material-ui/core';
+import './Gempa.css';
 
 const TextTypography = withStyles({
   root: { color: 'teal', fontWeight: 'bold' },
@@ -42,21 +43,23 @@ class BMKG extends React.Component {
     const { data } = this.state;
     return (
       <Grid
-        container
         spacing={0}
         direction="column"
         alignItems="center"
         justify="center"
-        style={{ minHeight: '100vh', paddingBottom: '50px' }}
+        className="gempa-container"
       >
         <Grid>
           <Card>
             <div>
-              <img
-                style={{ width: '100%' }}
-                src={`https://data.bmkg.go.id/DataMKG/TEWS/${data.Shakemap}`}
-                alt="Shakemap"
-              />
+              <div style={{ textAlign: 'center' }}>
+                <img
+                  className="gambar-gempa"
+                  src={`https://data.bmkg.go.id/DataMKG/TEWS/${data.Shakemap}`}
+                  alt="Shakemap"
+                />
+              </div>
+
               <CardContent style={{ textAlign: 'center' }}>
                 <TextTypography component="h1" align="center">
                   {data.Wilayah}
